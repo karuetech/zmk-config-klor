@@ -16,10 +16,10 @@ include:
   - board: nice_nano_v2
     shield: klor_dongle
   - board: nice_nano_v2
-    shield: klor_left
-    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+    shield: klor_left nice_oled
+    cmake-args: -DCONFIG_ZMK_SLEEP=y -DCONFIG_ZMK_IDLE_TIMEOUT=60000
   - board: nice_nano_v2
-    shield: klor_right
-    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+    shield: klor_right nice_oled
+    cmake-args: -DCONFIG_ZMK_SLEEP=y -DCONFIG_ZMK_IDLE_TIMEOUT=60000
   - board: nice_nano_v2
     shield: settings_reset
