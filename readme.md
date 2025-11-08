@@ -15,22 +15,36 @@ KLOR is a 36-42 key column-staggered split keyboard. It supports a per key RGB m
 
 Polydactyl is the default layout. If you choose one of the other layouts you can use the matching template in the default keymap.
 
-
-## HOW TO USE
-
-- fork this repo
-- `git clone` your repo, to create a local copy on your PC (you can use the [command line](https://www.atlassian.com/git/tutorials) or [github desktop](https://desktop.github.com/))
-- adjust the klor.keymap file (find all the keycodes on [the zmk docs pages](https://zmk.dev/docs/codes/))
-- `git push` your repo to your fork
-- on the GitHub page of your fork navigate to "Actions"
-- scroll down and unzip the `firmware.zip` archive that contains the latest firmware
-- connect the left half of the KLOR to your PC, press reset twice
-- the keyboard should now appear as a mass storage device
-- drag'n'drop the `klor_left-nice_nano_v2-zmk.uf2` file from the archive onto the storage device
-- repeat this process with the right half and the `klor_right-nice_nano_v2-zmk.uf2` file.
-
-
 ## KNOWN ISSUES
 
 - The encoder on the secondary side doesn't work yet. This is a limitation of ZMK.
 - Need to add the code for the Pixart Paw3204 trackball.
+- Need to add Seed XIAO controller support
+
+### Steps
+
+## Fork or Clone Repository
+   - Click **Fork** in the top right to copy this repo to your GitHub account, or
+   - Run `git clone` locally.
+
+   > Forking is recommended, because GitHub Actions will automatically build your firmware.
+
+## Keymap Editing
+   -  use the [ZMK Keymap Editor](https://nickcoutsos.github.io/keymap-editor/):
+   - Map your repository to the editor to see the current settings
+   - Make changes on the site and save
+   - your repository will be compiling the build with your new configuration
+   - read below on flashing your keyboard
+
+## Dongle Flashing
+   - Turn all devices off
+   - go to **Actions → your latest run → Artifacts** and download the firmware (`.uf2`) files.
+   - Flash the dongle with the **appropriate** `settings_reset` file.
+   - Flash the dongle controller with the `dongle` file.
+   - Flash the first half with the the `settings_reset` file.
+   - Flash the first half with the `left` or `right` files.
+   - Repeat last two steps for the other half.
+
+> [!WARNING]  
+> When using both Nice!Nano and Seeed XIAO microcontrollers, make sure you are flashing them with the correct files!
+
