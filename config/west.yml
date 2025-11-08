@@ -21,11 +21,11 @@ manifest:
       revision: main
     # nice_oled - nice_epaper
     - name: zmk-nice-oled
-      remote: karuetech
+      remote: mctechnology17
       revision: main
     # dongle_display!view
     - name: zmk-dongle-display-view
-      remote: karuetech
+      remote: mctechnology17
       revision: main
     # oled Adapter
     - name: zmk-oled-adapter
